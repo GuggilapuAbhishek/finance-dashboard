@@ -1,27 +1,125 @@
-# FinanceDashboard
+💰 Finance Dashboard (Angular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+A modern Finance Dashboard Web App built using Angular.
+This application allows users to track income and expenses, visualize data with charts, and manage transactions with role-based access.
 
-## Development server
+🚀 Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+📊 Dashboard Overview
 
-## Code scaffolding
+Total Balance, Income, and Expense summary cards
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+📈 Balance Trend (Line Chart)
 
-## Build
+🥧 Spending Breakdown (Pie Chart)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+🔍 Top Spending Category insight
 
-## Running unit tests
+💳 Transactions Management
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+View all transactions (Date, Amount, Category, Type)
 
-## Running end-to-end tests
+🔍 Search / Filter by category
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+➕ Add new transactions (Admin only)
 
-## Further help
+✏️ Edit transactions (Admin only)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+🗑 Delete transactions (Admin only)
+
+📊 Real-time chart updates
+
+🔐 Authentication & Roles
+
+Simple Login system (Frontend-based)
+
+Two roles:
+
+👨‍💼 Admin → Full access (Add/Edit/Delete)
+
+👤 Viewer → Read-only access
+
+Route protection using Auth Guard
+
+🌙 UI & UX Enhancements
+
+Clean and responsive layout
+
+Premium dashboard UI (cards + charts)
+
+Dark Mode support
+
+Loading Skeleton + animations
+
+Sidebar navigation (Razorpay/Paytm style)
+
+📁 Data Handling
+
+LocalStorage used for persistence
+
+Real-time updates across components
+
+Centralized state via services
+
+📤 Export Feature
+
+Export transactions as CSV file
+
+🛠 Tech Stack
+
+Angular (Standalone Components)
+
+TypeScript
+
+Chart.js (for data visualization)
+
+HTML5 + CSS3
+
+LocalStorage (for data persistence)
+
+⚙️ Installation & Setup
+
+# Clone the repo
+git clone https://github.com/your-username/finance-dashboard.git
+
+# Navigate to project
+cd finance-dashboard
+
+# Install dependencies
+npm install
+
+# Run the app
+ng serve
+Open in browser:
+
+http://localhost:4200/
+🧠 Future Improvements
+
+Backend integration (Node.js + MongoDB)
+
+JWT Authentication
+
+Advanced filtering & sorting
+
+Monthly analytics
+
+Mobile app version
+
+
+⭐ Acknowledgement
+
+This project is built for learning and demonstration purposes, inspired by modern fintech dashboards like Razorpay and Paytm.
+
+📌 Conclusion
+
+This project demonstrates:
+
+Component-based architecture
+
+State management
+
+Role-based UI
+
+Data visualization
+
+Real-world UI/UX practices
