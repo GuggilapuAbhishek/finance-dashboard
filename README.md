@@ -80,7 +80,7 @@ LocalStorage (for data persistence)
 ⚙️ Installation & Setup
 
 # Clone the repo
-git clone https://github.com/your-username/finance-dashboard.git
+git clone [https://github.com/your-username/finance-dashboard.git](https://github.com/GuggilapuAbhishek/finance-dashboard.git)
 
 # Navigate to project
 cd finance-dashboard
