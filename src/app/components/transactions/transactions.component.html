@@ -1,0 +1,77 @@
+<div class="transaction-layout">
+
+  <div class="chart-box">
+    <h3>Spending Overview</h3>
+    <canvas id="transactionChart"></canvas>
+  </div>
+
+  <div class="table-box">
+
+    <input
+      [(ngModel)]="searchText"
+      (input)="filterTransactions()"
+      placeholder="🔍 Search category..."
+      class="search-bar"
+    />
+
+    <div *ngIf="roleService.role === 'admin'" class="form">
+      <input type="date" [(ngModel)]="newTransaction.date" />
+      <input type="number" [(ngModel)]="newTransaction.amount" placeholder="Amount" />
+      <input type="text" [(ngModel)]="newTransaction.category" placeholder="Category" />
+
+      <select [(ngModel)]="newTransaction.type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+
+      <button *ngIf="!editingId" (click)="addTransaction()">Add</button>
+      <button *ngIf="editingId" (click)="updateTransaction()">Update</button>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Type</th>
+            <th *ngIf="roleService.role === 'admin'">Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let t of filteredTransactions">
+
+            <td>{{t.date}}</td>
+
+            <td [class.income]="t.type==='income'"
+                [class.expense]="t.type==='expense'">
+              ₹{{t.amount}}
+            </td>
+
+            <td>{{t.category}}</td>
+
+            <td>
+              <span class="badge"
+                [class.income]="t.type==='income'"
+                [class.expense]="t.type==='expense'">
+                {{t.type}}
+              </span>
+            </td>
+
+            <td *ngIf="roleService.role === 'admin'">
+              <button class="edit-btn" (click)="editTransaction(t)">✏️</button>
+              <button class="delete-btn" (click)="deleteTransaction(t.id)">🗑</button>
+            </td>
+
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+
+  </div>
+
+</div>

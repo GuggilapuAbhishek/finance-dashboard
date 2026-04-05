@@ -1,0 +1,35 @@
+<div class="insights-container">
+
+  <h3>📊 Insights</h3>
+
+  <div class="insight-cards">
+
+    <!-- Top Category -->
+    <div class="insight-card">
+      <p class="label">Top Category</p>
+      <h2>{{topCategory}}</h2>
+    </div>
+
+    <!-- Total Expense -->
+    <div class="insight-card">
+      <p class="label">Total Expense</p>
+      <h2 class="expense">₹{{totalExpense}}</h2>
+    </div>
+
+    <!-- Status -->
+    <div class="insight-card">
+      <p class="label">Status</p>
+
+      <h2 *ngIf="totalExpense > 5000" class="warning">
+        ⚠ High Spending
+      </h2>
+
+      <h2 *ngIf="totalExpense <= 5000" class="safe">
+        ✅ Good Control
+      </h2>
+
+    </div>
+
+  </div>
+
+</div>

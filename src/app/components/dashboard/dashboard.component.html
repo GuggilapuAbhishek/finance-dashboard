@@ -1,0 +1,50 @@
+<div *ngIf="!loading"></div>
+<div class="dashboard">
+<div *ngIf="loading" class="skeleton-container">
+  <div class="skeleton card"></div>
+  <div class="skeleton card"></div>
+  <div class="skeleton card"></div>
+</div>
+  <div class="cards">
+
+    <div class="card balance">
+      <h4>Total Balance</h4>
+      <p [style.color]="balance < 0 ? '#e74c3c' : '#2ecc71'">
+        ₹{{balance}}
+      </p>
+    </div>
+
+    <div class="card income">
+      <h4>Total Income</h4>
+      <p>₹{{income}}</p>
+    </div>
+
+    <div class="card expense">
+      <h4>Total Expense</h4>
+      <p>₹{{expense}}</p>
+    </div>
+
+    <div class="card insight">
+      <h4>Top Spending</h4>
+      <p>{{topCategory || '—'}}</p>
+    </div>
+
+  </div>
+
+  <!-- CHARTS -->
+  <div class="charts">
+
+    <div class="chart-box">
+      <h3>Spending Breakdown</h3>
+      <canvas id="pieChart"></canvas>
+    </div>
+
+    <div class="chart-box">
+      <h3>Balance Trend</h3>
+      <canvas id="lineChart"></canvas>
+    </div>
+
+  </div>
+
+</div>
+<app-insights></app-insights>

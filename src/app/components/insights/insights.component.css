@@ -1,0 +1,38 @@
+.insight-card {
+  flex: 1;
+  padding: 15px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.insight-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* labels */
+.label {
+  font-size: 12px;
+  color: #666;
+}
+
+/* values */
+h2 {
+  margin-top: 5px;
+  color: #222;
+}
+
+/* CLASSIC COLORS */
+.expense {
+  color: #c0392b;   /* soft red */
+}
+
+.warning {
+  color: #d68910;   /* amber */
+}
+
+.safe {
+  color: #2e7d32;   /* deep green */
+}

@@ -1,0 +1,97 @@
+.dashboard {
+  padding: 20px;
+  background: #f4f6f8;
+  min-height: 100vh;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* COLORS */
+.balance { background: linear-gradient(135deg, #2c3e50, #4ca1af); }
+.income { background: linear-gradient(135deg, #11998e, #38ef7d); }
+.expense { background: linear-gradient(135deg, #e74c3c, #ff6a6a); }
+.insight { background: linear-gradient(135deg, #8e44ad, #c471ed); }
+
+.card h4 {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.card p {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* CHARTS */
+.charts {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.chart-box {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.chart-box h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+/* FADE IN */
+.dashboard {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* SKELETON */
+.skeleton-container {
+  display: flex;
+  gap: 20px;
+}
+
+.skeleton {
+  height: 100px;
+  flex: 1;
+  border-radius: 12px;
+  background: linear-gradient(
+    90deg,
+    #eee 25%,
+    #ddd 37%,
+    #eee 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.2s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 100% 0 }
+  100% { background-position: -100% 0 }
+}

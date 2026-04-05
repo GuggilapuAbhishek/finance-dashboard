@@ -1,0 +1,36 @@
+<div class="header">
+  <div class="button-container">
+
+    <!-- Dashboard -->
+    <button class="button" routerLink="/">🏠 Home</button>
+
+    <!-- Transactions -->
+    <button class="button" routerLink="/transactions">📊Transactions</button>
+
+
+<!-- ROLE SWITCH -->
+<div *ngIf="isTransactionsPage()" class="switch-box">
+  <span class="label left"> 👤 Viewer</span>
+
+  <label class="switch">
+    <input type="checkbox" (change)="toggleRole($event)">
+    <span class="slider"></span>
+  </label>
+
+  <span class="label right"> 🛠Admin</span>
+</div>
+
+<!-- DARK MODE SWITCH -->
+<div class="switch-box">
+  <span class="label left">☀️ Light</span>
+
+  <label class="switch">
+    <input type="checkbox" (change)="toggleDarkMode($event)">
+    <span class="slider"></span>
+  </label>
+
+  <span class="label right">🌙 Dark</span>
+</div>
+
+  </div>
+</div>
